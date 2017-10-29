@@ -48,7 +48,7 @@
 	       d>  250000 ? '#2c7bb6' :
 	                    '#b30000' ;
       }	    
-      function poblacion(feature, layer) {
+      function onEachFeature(feature, layer) {
       var popupContent = "Poblacion en canton: ";
       if (feature.properties && feature.properties.POB_2011_T) {
 	  popupContent += feature.properties.POB_2011_T;
@@ -57,7 +57,7 @@
 	}
 	layer.bindPopup(popupContent);
       }	    	    
-      function nombre(feature, layer) {
+      function onEachFeature(feature, layer) {
       var popupContent = "Nombre del canton: ";
       if (feature.properties && feature.properties.NCANTON) {
 	  popupContent += feature.properties.NCANTON;
@@ -79,9 +79,8 @@
           };
         },
 	      
-	onEachFeature: poblacion,
-	onEachFeature: nombre
-	      
+	onEachFeature: onEachFeature
+		      
       })
       cantonescr.addTo(mapa);
       	    
