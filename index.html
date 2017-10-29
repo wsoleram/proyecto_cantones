@@ -51,7 +51,7 @@
       function onEachFeature(feature, layer) {
       var popupContent = "Poblacion en canton: ";
       if (feature.properties && feature.properties.POB_2011_T) {
-	  popupContent += feature.properties.POB_2011_T;
+	  popupContent += "<br>"+feature.properties.POB_2011_T;
 	} else {
 	  popupContent += 0; 
 	}
