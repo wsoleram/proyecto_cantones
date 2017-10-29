@@ -57,8 +57,6 @@
 	}
 	layer.bindPopup(popupContent);
       }	    	    
-      function onEachFeature(feature, layer) {
-      var popupContent = " ";
       if (feature.properties && feature.properties.NCANTON) {
 	  popupContent += "<br>"+feature.properties.NCANTON;
 	} else {
