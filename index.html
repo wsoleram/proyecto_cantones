@@ -49,7 +49,7 @@
 	                    '#b30000' ;
       }	    
       function onEachFeature(feature, layer) {
-      var popupContent = "Poblacion en canton: ";
+      var popupContent = " ";
       if (feature.properties && feature.properties.POB_2011_T) {
 	  popupContent += "<br>"+feature.properties.POB_2011_T;
 	} else {
@@ -58,7 +58,7 @@
 	layer.bindPopup(popupContent);
       }	    	    
       function onEachFeature(feature, layer) {
-      var popupContent = "Nombre del canton: ";
+      var popupContent = " ";
       if (feature.properties && feature.properties.NCANTON) {
 	  popupContent += "<br>"+feature.properties.NCANTON;
 	} else {
