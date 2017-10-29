@@ -50,7 +50,6 @@
       }	    
       function onEachFeature(feature, layer) {
       var popupContent = " ";
-      
       if (feature.properties && feature.properties.NCANTON) {
 	  popupContent += "<br>"+feature.properties.NCANTON;
 	} else {
@@ -62,8 +61,8 @@
 	  popupContent += 0; 
 	}      
 	layer.bindPopup(popupContent);
-         
-       var cantonescr = L.geoJson(cantones, {
+        } 
+        var cantonescr = L.geoJson(cantones, {
         style: function (feature) {
 	  return {
 	    weight: 2,
