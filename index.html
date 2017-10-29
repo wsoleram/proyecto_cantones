@@ -45,7 +45,8 @@
 	return d > 50000  ? '#d7191c':
 	       d > 150000 ? '#fec980':
 	       d > 200000 ? '#c7e6db':
-	                  ? '#2c7bb6';
+	       d>  250000 ? '#2c7bb6':
+	                    '#b30000';
       }	    
       function poblacion(feature, layer) {
 	var popupContent = "Poblacion en canton: ";
@@ -72,14 +73,13 @@
 	onEachFeature: poblacion
       })
       cantonescr.addTo(mapa);
-	   
-        	    
+      	    
       var baseLayers = {
 	"OpenStreetMap": osm,
 	"MapBox" : mbox
       };
       var overlays = {
-      "Cantones de costa rica": cantonescr
+      "Cantones de costa rica":cantonescr
       };
       L.control.layers(baseLayers, overlays).addTo(mapa);
 	    
