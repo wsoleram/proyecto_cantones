@@ -60,7 +60,7 @@
       function onEachFeature(feature, layer) {
       var popupContent = "Nombre del canton: ";
       if (feature.properties && feature.properties.NCANTON) {
-	  popupContent += feature.properties.NCANTON;
+	  popupContent += "<br>"+feature.properties.NCANTON;
 	} else {
 	  popupContent += 0; 
 	}
