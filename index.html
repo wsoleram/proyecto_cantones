@@ -51,12 +51,12 @@
       function onEachFeature(feature, layer) {
       var popupContent = " ";
       if (feature.properties && feature.properties.NCANTON) {
-	  popupContent += "<br>"+feature.properties.NCANTON;
+	  popupContent += "<br> Nombre:"+feature.properties.NCANTON;
 	} else {
 	  popupContent += 0; 
 	}
 	if (feature.properties && feature.properties.POB_2011_T) {
-	    popupContent += "<br>"+feature.properties.POB_2011_T;
+	    popupContent += "<br> Poblacion:"+feature.properties.POB_2011_T;
 	} else {
 	  popupContent += 0; 
 	}      
