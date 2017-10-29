@@ -38,40 +38,7 @@
       });    
       osm.addTo(mapa);
 	    
-      // retorna un color con base en la cantidad de especies
-      function color(d) {
-	return d > 6000 ? '#d7191c' :
-	       d > 4000 ? '#fec980' :
-	       d > 2000 ? '#c7e6db' :
-		          '#2c7bb6';
-      }	    
-      function infoRiqueza(feature, layer) {
-	var popupContent = "Riqueza de especies: ";
-	if (feature.properties && feature.properties.spprichnes) {
-	  popupContent += feature.properties.spprichnes;
-	} else {
-	  popupContent += 0; 
-	}
-	layer.bindPopup(popupContent);
-      }	    	    
-	    
-      var riqueza = L.geoJson(riqespecies, {
-        style: function (feature) {
-	  return {
-	    weight: 2,
-	    opacity: 1,
-	    color: 'white',
-	    dashArray: '3',
-	    fillOpacity: 0.7,		  
-            fillColor: color(feature.properties.spprichnes)
-          };
-        },
-	      
-	onEachFeature: infoRiqueza
-      })
-      riqueza.addTo(mapa);
-	 
-	    
+    
 	    
       // retorna un color con base en la cantidad de especies
       function color(d) {
