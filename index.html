@@ -30,6 +30,13 @@
       });
       osm.addTo(mapa);
 	    
+	var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        });
+        OpenTopoMap.addTo(mapa)
+	 	 	    
+	    
       // retorna un color con base en la cantidad de especies
       function color(d) {
 	return d > 50000  ? '#fdd399' :
@@ -71,6 +78,7 @@
       	    
       var baseLayers = {
 	"OpenStreetMap": osm
+	"OpenTopoMap":OpenTopoMap
       };
       var overlays = {
       "Cantones de costa rica":cantonescr
